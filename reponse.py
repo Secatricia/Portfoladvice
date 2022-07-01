@@ -1,3 +1,20 @@
+#!/usr/bin/python3
+import cgi
+import cgitb
+from logging import raiseExceptions
+
+cgitb.enable()
+form = cgi.FieldStorage()
+
+if form.getvalue("montant"):
+    montant = form.getvalue("montant")
+    print(montant)
+else:
+    raiseExceptions("Pas de montant")
+
+print("Content-type: text/html; charset=utf-8\n")
+
+html = """
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +50,7 @@
             <li>Etape 2</li>
             <li>Etape 3</li>
           </ul>
-          <form class="form-wrapper" method="post" action="reponse.py">
+          <form class="form-wrapper" action="reponse.py" method="post">
             <fieldset class="section is-active">
               <h3>Montant à investir</h3>
               <input type="text" name="Montant" id="montant" placeholder="Montant en euro">
@@ -93,3 +110,5 @@
       </div>
 </body>
 </html>
+"""
+print(html)
