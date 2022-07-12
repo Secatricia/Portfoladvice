@@ -7,9 +7,9 @@ $(document).ready(function () {
 		currentSection.removeClass("is-active").next().addClass("is-active");
 		headerSection.removeClass("is-active").next().addClass("is-active");
 
-		$(".form-wrapper").submit(function (e) {
-			e.preventDefault();
-		});
+		// $(".form-wrapper").submit(function (e) {
+		// 	e.preventDefault();
+		// });
 
 		if (currentSectionIndex === 3) {
 			$(document).find(".form-wrapper .section").first().addClass("is-active");
