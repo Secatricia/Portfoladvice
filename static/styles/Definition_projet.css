@@ -342,9 +342,9 @@ html, body{
     color: #fff;
     cursor: pointer;
     font-size: 14px !important;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+    /* position: absolute; */
+    /* right: 20px;
+    bottom: 20px; */
   }
   
   .form-wrapper .submit{
@@ -362,7 +362,7 @@ html, body{
   .form-wrapper input[type="password"]{
     display: block;
     padding: 10px;
-    margin: 85px auto;
+    margin: 52px auto;
     background-color: #f1f1f1;
     border: none;
     width: 50%;
